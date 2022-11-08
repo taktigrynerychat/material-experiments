@@ -1,0 +1,40 @@
+.tab-list {
+  width: 100px;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  padding: 10px;
+  margin: 0;
+  cursor: pointer;
+
+  & > li {
+    list-style-type: none;
+    border-bottom: solid 1px #8b8b8b;
+    padding: 8px 0;
+  }
+
+  & > li:last-child {
+    border-bottom: none;
+  }
+}
+
+.select-tab {
+  &.mat-tab-label {
+    padding: 0;
+  }
+
+  .mat-tab-label-content, .select-tab__label {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+
