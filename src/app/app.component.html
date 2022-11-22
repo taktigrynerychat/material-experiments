@@ -29,5 +29,10 @@
   </mat-tab>
 </mat-tab-group>
 
+<form [formGroup]="group">
+  <mat-form-field>
+    <input matInput formControlName="name" tooltipError>
+  </mat-form-field>
+</form>
 
 

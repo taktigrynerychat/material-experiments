@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component, ViewEncapsulation} from '@angular/co
 import {ComponentPortal} from "@angular/cdk/portal";
 import {TabComponent} from "./tab/tab.component";
 import {TabTwoComponent} from "./tab-two/tab-two.component";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'dummy-root',
@@ -26,6 +27,11 @@ export class AppComponent {
       portal: new ComponentPortal(TabTwoComponent)
     },
   ]
+
+  group = new FormGroup({
+      name: new FormControl('', [Validators.required, Validators.minLength(2)]),
+    }
+  )
 
 
   public selectTab(tab: typeof this.tabs[0]): void {
